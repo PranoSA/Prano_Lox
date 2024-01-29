@@ -1,8 +1,8 @@
-#include "chunk.h"
+#include "core/chunk.h"
 
 #include "types/value.h"
 
-#include "memory.h"
+#include "core/memory.h"
 
 #include <assert.h>
 

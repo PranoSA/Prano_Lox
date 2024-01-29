@@ -5,11 +5,15 @@ name = pranolox
 C_SOURCES := $(shell find ./src -name '*.c')
 #TEST_SOURCES := $(wildcard ./tests/*.c)
 TEST_SOURCES := $(shell find ./tests -name '*.c')
-C_SOURCES_TEST := $(filter-out ./src/main.c,$(C_SOURCES))
+C_SOURCES_TEST := $(filter-out ./src/core/main.c,$(C_SOURCES))
 
 build:
 	@echo $(C_SOURCES)
 	gcc $(flags) $(C_SOURCES) -o ./bin/$(name)
+
+build_debug:
+	@echo $(C_SOURCES)
+	gcc $(flags) $(C_SOURCES) -g -o ./bin/$(name)
 
 # Test Actually Runs the software and sees if it returns an exit code
 list_tests:

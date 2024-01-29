@@ -10,7 +10,7 @@
 
 #include <stdio.h>
 
-#include "chunk.h"
+#include "core/chunk.h"
 
 #include <stdlib.h>
 

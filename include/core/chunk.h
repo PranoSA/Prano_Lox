@@ -1,7 +1,7 @@
 #ifndef pranolox_chunk_h
 #define pranolox_chunk_h
 
-#include "common.h"
+#include "core/common.h"
 #include "types/value.h"
 
 // OpCode is an enum of all the possible opcodes
@@ -11,7 +11,27 @@
 typedef enum
 {
   OP_CONSTANT,
-  OP_RETURN,
+  OP_RETURN,    // Return
+  OP_NEGATE,    // - (constant) -> Before or After Constant, Can I treat This differently?
+  OP_ADD,       // +
+  OP_SUBTRACT,  // -
+  OP_FACTORIAL, // (constant)! 4 + 3! or 4 + !3 -> Can I treat These Different?
+  // What about (4+3)! or 4+3! -> Can I treat These Different?
+  // This Would Be At the Level of the Lexican Analysis
+  // Binary Operators -> +, -, *, /, &, |, ^, <<, >>, %, **
+  OP_BIN_AND,         //&
+  OP_BIN_OR,          // |
+  OP_BIN_XOR,         // ^
+  OP_BIN_LEFT_SHIFT,  // <<
+  OP_BIN_RIGHT_SHIFT, // >>
+
+  // Boolean Types
+  OP_NOT, // !
+
+  // Numbers ??
+  OP_MODULUS,  // %
+  OP_MULTIPLY, // *
+  OP_DIVIDE,   // /
 } OpCode;
 
 /*
