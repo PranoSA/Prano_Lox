@@ -1,7 +1,8 @@
-#ifndef pranolox_value 
+#ifndef pranolox_value
 #define pranolox_value
 
-typedef enum {
+typedef enum
+{
     VAL_BOOL,
     VAL_NIL,
     VAL_NUMBER,
@@ -15,18 +16,18 @@ typedef enum {
     VAL_SET,
 } ValueType;
 
-
 typedef double Value;
 
-typedef struct {
+typedef struct
+{
     int capacity;
-    int count; 
-    Value *values; //Change This Later To Be More General 
+    int count;
+    Value *values; // Change This Later To Be More General
 } ValueArray;
 
-void initValueArray(ValueArray* array);
-void writeValueArray(ValueArray* array, Value value);
-void freeValueArray(ValueArray* array);
+void initValueArray(ValueArray *array);
+void writeValueArray(ValueArray *array, Value value);
+void freeValueArray(ValueArray *array);
 void printValue(Value value);
 
 #endif

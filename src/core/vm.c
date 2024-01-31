@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include "core/common.h"
 #include "core/debug.h"
+#include "compiler/compiler.h"
 
 VM vm;
 
@@ -104,4 +105,10 @@ Value pop()
 {
     vm.stackTop--;
     return *vm.stackTop;
+}
+
+InterpretResult interpret(const char *source)
+{
+    compile(source);
+    return INTERPRET_OK;
 }

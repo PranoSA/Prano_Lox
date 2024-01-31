@@ -3,6 +3,7 @@
 #include "core/chunk.h"
 #include "core/memory.h"
 #include <stddef.h>
+#include "types/value.h"
 
 void initChunk(Chunk *chunk)
 {

@@ -63,6 +63,7 @@
     "chunk.h": "c",
     "vector": "c",
     "debug.h": "c",
-    "memory.h": "c"
+    "memory.h": "c",
+    "value.h": "c"
   }
 }
